@@ -110,6 +110,6 @@ after runing the above command, test cases report file available in
 <<CURRENT_DIR>>/build/reports/tests/test/index.html
 
 ## Jenkins CI/CD Pipeline steps
-1. Checkout the source code from the https://github.com/murali101/university-enrollment.git
+1. Checkout the source code from the https://github.com/murali101/university-enrollment.git - branch name ==> main
 2. Please look into the Jenkins file for steps in the build process - Build Configuration
 3. Post build, kubernetes deployment file available in Kubernetes.yaml
