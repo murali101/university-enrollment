@@ -36,7 +36,6 @@ pipeline {
             steps {
                 sh 'gradle bootBuildImage'
                 sh 'docker build -t university-enrollment:latest .'
-
             }
         }
 
@@ -45,20 +44,6 @@ pipeline {
                 sh 'docker login -u mkrishnap -p abcd@1234'
                 sh 'docker tag university-enrollment mkrishnap/university-enrollment'
                 sh 'docker push mkrishnap/university-enrollment'
-            }
-        }
-
-        stage('Chart') {
-                    steps {
-                        sh 'helm create university-enrollment'
-                        sh 'helm lint ./university-enrollment'
-                        sh 'helm install --dry-run -name university-enrollment ./university-enrollment'
-                    }
-                }
-
-        stage('Deploy') {
-            steps {
-                sh 'helm install -name university-enrollment ./university-enrollment'
             }
         }
      }
