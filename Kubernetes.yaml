@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: university-enrollment
+  labels:
+    app: university-enrollment
+spec:
+  selector:
+    matchLabels:
+      app: university-enrollment
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: university-enrollment
+    spec:
+      containers:
+        - name: university-enrollment
+          image: mkrishnap/university-enrollment:latest
+          ports:
+            - containerPort: 8080
