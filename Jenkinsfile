@@ -43,7 +43,7 @@ pipeline {
         stage('Publish Docker Image') {
             steps {
                 sh 'docker login -u mkrishnap -p abcd@1234'
-                sh 'docker tag springboot-jenkins mkrishnap/university-enrollment'
+                sh 'docker tag university-enrollment mkrishnap/university-enrollment'
                 sh 'docker push mkrishnap/university-enrollment'
             }
         }
