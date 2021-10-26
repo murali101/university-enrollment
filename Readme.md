@@ -111,6 +111,13 @@ after runing the above command, test cases report file available in
 
 ## Jenkins CI/CD Pipeline steps
 1. Checkout the source code from the https://github.com/murali101/university-enrollment.git - branch name ==> master
-2. Please look into the Jenkins file for steps in the build process - Build Configuration
+2. Please look into the Jenkinsfile for steps in the build process - Build Configuration
 3. Docker need to be installed on build system
 4. Post build, kubernetes deployment file available in Kubernetes.yaml
+
+## Otherways to build application from local
+Execute the commands present in the Jenkinsfile manually
+
+
+###Start server in local
+<<CURRENT_DIR>>gradle bootRun

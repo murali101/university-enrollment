@@ -40,7 +40,7 @@ public class AuthenticationService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("USER NOT PRESENT IN THE SYSTEM - " + username);
         } else {
-            log.info("USER EXISTS IN THE SYSTEM ==> {}", user);
+            log.info("USER EXISTS IN THE SYSTEM - {}", username);
         }
 
         return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(), true, true,
