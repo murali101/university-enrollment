@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Source') {
             steps {
-                git 'https://github.com/murali101/university-enrollment.git'
+                git clone 'https://github.com/murali101/university-enrollment.git'
             }
         }
         stage('Assemble') {
